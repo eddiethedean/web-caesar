@@ -35,9 +35,7 @@ form = """
                     <input name="rot" type="text" value='{rot}' />
                 </label>
                 <p class="error">{rot_error}</p>
-                <label>
-                    <input name="input" type="textarea" value='{input_val}' />
-                </label>
+                <textarea input name="input">{input_val}</textarea>
                 <br>
                 <input type="submit" value="Submit Query" />
             </form>
@@ -70,6 +68,5 @@ def encrypt():
         rot = ''
     
     return form.format(rot=rot,rot_error=error_msg,input_val=input_val)
-    #"<h1>{input}</h1>".format(input=input_val)
 
 app.run()
